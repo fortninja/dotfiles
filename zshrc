@@ -18,9 +18,6 @@ antigen use oh-my-zsh
 antigen theme half-life
 antigen apply
 
-# torch
-source /home/tony/torch/install/bin/torch-activate
-
 # begin env variables
 
 # editor
