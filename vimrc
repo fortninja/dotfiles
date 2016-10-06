@@ -10,6 +10,9 @@ set expandtab
 set tabstop=4
 set shiftwidth=4
 
+" trim trailing whitespace on save
+autocmd BufWritePre * :%s/\s\+$//e
+
 ""UI
 set number
 set cul " highlight current line
