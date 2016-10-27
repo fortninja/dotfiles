@@ -28,3 +28,7 @@ else
   highlight OverLength ctermbg=red ctermfg=white guibg=#592929
   match OverLength /\%81v.\+/
 endif
+
+"" clang-format binding
+map <C-K> :pyf /usr/share/clang/clang-format.py<cr>
+imap <C-K> <c-o>:pyf /usr/share/clang/clang-format.py<cr>
