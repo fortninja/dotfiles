@@ -13,10 +13,10 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
-source /usr/share/zsh/scripts/antigen/antigen.zsh
-antigen use oh-my-zsh
-antigen theme half-life
-antigen apply
+export ZSH=/home/tony/.antigen/repos/https-COLON--SLASH--SLASH-github.com-SLASH-robbyrussell-SLASH-oh-my-zsh.git
+ZSH_THEME="half-life"
+plugins=(git)
+source $ZSH/oh-my-zsh.sh
 
 # begin env variables
 
@@ -41,7 +41,7 @@ alias gc='git commit'
 alias gcm='git commit -m'
 alias gca='gc -a'
 alias gd='git diff'
-alias gl='git log'
+alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
 alias go='git checkout'
 alias gcb='git checkout -b'
 alias gcB='git checkout -B'
