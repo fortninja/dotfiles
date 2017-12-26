@@ -1,0 +1,3 @@
+# should be in ~/.gitignore
+# vim swap files
+*.swp

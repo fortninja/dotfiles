@@ -1,4 +1,0 @@
-# should be in $HOME/.global_gitignore
-
-# vim swap files
-*.swp
