@@ -13,24 +13,16 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
-export ZSH=/home/tony/.antigen/repos/https-COLON--SLASH--SLASH-github.com-SLASH-robbyrussell-SLASH-oh-my-zsh.git
+# oh-my-zsh setup
+export ZSH=/usr/share/oh-my-zsh
 ZSH_THEME="half-life"
-plugins=(git)
+#plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
-# begin env variables
-
+# env variables
 # editor
 export EDITOR='vim'
 export VISUAL='vim'
-
-# Android SDK
-export ANDROID_HOME=/opt/android-sdk
-
-# postgres user
-export PGUSER="fortninja"
-
-# end env variables
 
 # git aliases
 alias g=git
