@@ -6,9 +6,11 @@ set autoindent
 filetype plugin indent on
 
 ""Tab settings
-set expandtab
-set tabstop=4
+set tabstop=8
+set softtabstop=4
 set shiftwidth=4
+set expandtab
+set pastetoggle=<F2>
 
 " trim trailing whitespace on save
 autocmd BufWritePre * :%s/\s\+$//e
@@ -21,13 +23,13 @@ set ruler
 set showmatch " matching brackets
 
 ""highlight the 81st column to show long lines
-if exists('+colorcolumn')
-  set colorcolumn=81
-  highlight ColorColumn ctermbg=red
-else
-  highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-  match OverLength /\%81v.\+/
-endif
+"if exists('+colorcolumn')
+"  set colorcolumn=81
+"  highlight ColorColumn ctermbg=red
+"else
+"  highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+"  match OverLength /\%81v.\+/
+"endif
 
 "" clang-format binding
 map <C-K> :pyf /usr/share/clang/clang-format.py<cr>
