@@ -19,6 +19,8 @@ ZSH_THEME="half-life"
 #plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
+RPROMPT="[%D{%l:%M:%S%p}]"
+
 # env variables
 # editor
 export EDITOR='vim'
