@@ -6,13 +6,6 @@ unsetopt notify
 bindkey -e
 COMPLETION_WAITING_DOTS="true"
 
-# The following lines were added by compinstall
-zstyle :compinstall filename '/home/tony/.zshrc'
-
-autoload -Uz compinit
-compinit
-# End of lines added by compinstall
-
 # oh-my-zsh setup
 export ZSH=/usr/share/oh-my-zsh
 ZSH_THEME="half-life"
@@ -22,10 +15,17 @@ source $ZSH/oh-my-zsh.sh
 RPROMPT="[%D{%l:%M:%S%p}]"
 
 # env variables
-# editor
 export EDITOR='vim'
 export VISUAL='vim'
 
+# general aliases
+alias rtfm=man
+alias please=sudo
+alias no='yes n'
+alias mountusb='sudo mount /dev/sdb1 /mnt/usb'
+alias umountusb='sudo umount /mnt/usb'
+alias mountsd='sudo mount /dev/mmcblk0p1 /mnt/sd'
+alias umountsd='sudo umount /mnt/sd'
 # git aliases
 alias g=git
 alias gs='git status'
@@ -48,12 +48,21 @@ alias gr='git rebase'
 alias grm='git rebase origin/master'
 alias gf='git fetch'
 
-# other aliases
-alias rtfm=man
-alias please=sudo
-alias no='yes n'
-alias mountusb='sudo mount /dev/sdb1 /mnt/usb'
-alias umountusb='sudo umount /mnt/usb'
-alias mountwin='sudo mount /dev/sda4 /mnt/win'
-alias mountsd='sudo mount /dev/mmcblk0p1 /mnt/sd'
-alias umountsd='sudo umount /mnt/sd'
+# The following lines were added by compinstall
+
+zstyle ':completion:*' auto-description 'specify: %d'
+zstyle ':completion:*' format 'completing %d'
+zstyle ':completion:*' list-colors ''
+zstyle ':completion:*' list-prompt %SAt %p: Hit TAB for more, or the character to insert%s
+zstyle ':completion:*' matcher-list '' 'm:{[:lower:]}={[:upper:]}' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' 'r:|[._-]=** r:|=**'
+zstyle ':completion:*' menu select=5
+zstyle ':completion:*' original true
+zstyle ':completion:*' preserve-prefix '//[^/]##/'
+zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
+zstyle ':completion:*' use-compctl true
+zstyle ':completion:*' verbose true
+zstyle :compinstall filename '/home/anna/.zshrc'
+
+autoload -Uz compinit
+compinit
+# End of lines added by compinstall
