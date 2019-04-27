@@ -12,13 +12,24 @@ ZSH_THEME="half-life"
 #plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
-RPROMPT="[%D{%l:%M:%S%p}]"
+# autoload -U colors && colors
+# setopt PROMPT_SUBST
+
+RPROMPT=$'%(?..%{$fg[red]%}%?%{$reset_color%}) [%D{%l:%M:%S%p}]'
 
 # env variables
 export EDITOR='vim'
 export VISUAL='vim'
 
-# general aliases
+# inefficient, recursive count of files in a directory (default .)
+contents() {
+    find "`[ -n \"$1\" ] && echo \"$1\" || echo \".\"`" -type f | wc -l
+}
+
+# random convenient aliases
+alias py=python
+alias ytdlx='youtube-dl -x --audio-quality 0 --audio-format vorbis'
+# system command aliases
 alias rtfm=man
 alias please=sudo
 alias no='yes n'
