@@ -11,17 +11,19 @@ call plug#begin('~/.vim/plugged')
 Plug 'junegunn/vim-plug'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-fugitive'
+Plug 'mileszs/ack.vim'
 "Plug 'Valloric/YouCompleteMe'
 call plug#end()
 
-"" syntax highlighting and indentation
+"" syntax highlighting
 if !exists("g:syntax_on")
     syntax enable
 endif
+
+"" indent settings
 set autoindent
 filetype plugin indent on
-
-"" tabbing settings
 set tabstop=8
 set softtabstop=4
 set shiftwidth=4
@@ -29,12 +31,22 @@ set expandtab
 set pastetoggle=<F2>
 
 "" UI
-set nowrap
 set number
 set cul " highlight current line
 set incsearch " highlight search as you type
 set ruler
 set showmatch " matching brackets
+" line length
+set wrap
+set colorcolumn=79
+
+"" search in many files
+cnoreabbrev ack Ack
+cnoreabbrev Ag Ack
+cnoreabbrev ag Ack
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
 
 "" tab navigation
 nnoremap th :tabfirst<CR>
@@ -44,15 +56,6 @@ nnoremap tl :tablast<CR>
 
 "" misc
 set nomodeline
-
-"" highlight the 81st column to show long lines
-"if exists('+colorcolumn')
-"  set colorcolumn=81
-"  highlight ColorColumn ctermbg=red
-"else
-"  highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-"  match OverLength /\%81v.\+/
-"endif
 
 " trim trailing whitespace on save
 "autocmd BufWritePre * :%s/\s\+$//e
