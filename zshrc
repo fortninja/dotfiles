@@ -56,7 +56,7 @@ alias gpf='git push --force'
 alias gpu='git push -u origin $(git rev-parse --abbrev-ref HEAD)'
 alias gu='git pull'
 alias gr='git rebase'
-alias grm='git rebase origin/master'
+alias grom='git rebase origin/master'
 alias gf='git fetch'
 
 # The following lines were added by compinstall
@@ -72,7 +72,7 @@ zstyle ':completion:*' preserve-prefix '//[^/]##/'
 zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
 zstyle ':completion:*' use-compctl true
 zstyle ':completion:*' verbose true
-zstyle :compinstall filename '/home/anna/.zshrc'
+zstyle :compinstall filename '~/.zshrc'
 
 autoload -Uz compinit
 compinit
