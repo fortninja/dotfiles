@@ -59,7 +59,7 @@ nnoremap tl :tablast<CR>
 set nomodeline
 
 " trim trailing whitespace on save
-"autocmd BufWritePre * :%s/\s\+$//e
+autocmd BufWritePre * :%s/\s\+$//e
 
 "" clang-format binding
 map <C-K> :pyf /usr/share/clang/clang-format.py<cr>
