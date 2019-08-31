@@ -10,6 +10,7 @@ endif
 call plug#begin('~/.vim/plugged')
 Plug 'junegunn/vim-plug'
 Plug 'tpope/vim-unimpaired'
+Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'mileszs/ack.vim'
