@@ -14,7 +14,9 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'mileszs/ack.vim'
-"Plug 'Valloric/YouCompleteMe'
+Plug 'ConradIrwin/vim-bracketed-paste'
+Plug 'jiangmiao/auto-pairs'
+Plug 'Valloric/YouCompleteMe'
 call plug#end()
 
 "" syntax highlighting
