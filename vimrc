@@ -20,7 +20,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'rhysd/vim-clang-format'
 Plug 'vim-scripts/a.vim'
 
-Plug 'Valloric/YouCompleteMe'
+" Plug 'Valloric/YouCompleteMe'
 call plug#end()
 
 "" syntax highlighting
