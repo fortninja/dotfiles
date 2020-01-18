@@ -17,6 +17,8 @@ Plug 'tpope/vim-eunuch'
 Plug 'mileszs/ack.vim'
 Plug 'ConradIrwin/vim-bracketed-paste'
 Plug 'jiangmiao/auto-pairs'
+Plug 'rhysd/vim-clang-format'
+
 Plug 'Valloric/YouCompleteMe'
 call plug#end()
 
