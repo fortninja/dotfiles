@@ -7,7 +7,7 @@ bindkey -e
 COMPLETION_WAITING_DOTS="true"
 
 # oh-my-zsh setup
-export ZSH=/usr/share/oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="half-life"
 #plugins=(git)
 source $ZSH/oh-my-zsh.sh
