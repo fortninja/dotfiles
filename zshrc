@@ -47,7 +47,6 @@ alias gc='git commit'
 alias gca='git commit --amend'
 alias gcan='git commit --amend --no-edit'
 alias gcm='git commit -m'
-alias gca='gc -a'
 alias gd='git diff'
 alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
 alias go='git checkout'
