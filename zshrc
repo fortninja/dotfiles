@@ -26,6 +26,8 @@ fi
 export EDITOR='vim'
 export VISUAL='vim'
 
+export PATH=~/llvm-project/build/bin:$PATH
+
 # inefficient, recursive count of files in a directory (default .)
 contents() {
     find "`[ -n \"$1\" ] && echo \"$1\" || echo \".\"`" -type f | wc -l
