@@ -1,6 +1,6 @@
 HISTFILE=~/.zsh_history
-HISTSIZE=100000
-SAVEHIST=30000000
+HISTSIZE=10000
+SAVEHIST=30000
 setopt appendhistory nomatch
 unsetopt notify
 bindkey -e
