@@ -73,6 +73,7 @@ nnoremap tl :tablast<CR>
 
 "" misc
 set nomodeline
+set title
 
 " trim trailing whitespace on save
 autocmd BufWritePre * :%s/\s\+$//e
