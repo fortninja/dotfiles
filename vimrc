@@ -18,6 +18,7 @@ Plug 'mileszs/ack.vim'
 Plug 'ConradIrwin/vim-bracketed-paste'
 Plug 'jiangmiao/auto-pairs'
 Plug 'rhysd/vim-clang-format'
+Plug 'vim-scripts/a.vim'
 
 Plug 'Valloric/YouCompleteMe'
 call plug#end()
@@ -79,5 +80,5 @@ set title
 autocmd BufWritePre * :%s/\s\+$//e
 
 "" clang-format binding
-map <C-K> :pyf /usr/share/clang/clang-format.py<cr>
-imap <C-K> <c-o>:pyf /usr/share/clang/clang-format.py<cr>
+map <C-K> :ClangFormat<CR>
+" imap <C-K> <c-o>:py3 /usr/share/clang/clang-format.py<cr>
