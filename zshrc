@@ -30,6 +30,7 @@ contents() {
 alias py=python
 alias ytdlx='youtube-dl -x --audio-quality 0 --audio-format vorbis'
 alias venv='source virtualenv/bin/activate'
+alias gdb='gdb -q'
 # system command aliases
 alias rtfm=man
 alias please=sudo
