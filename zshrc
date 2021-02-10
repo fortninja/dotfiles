@@ -25,6 +25,7 @@ fi
 # env variables
 export EDITOR='vim'
 export VISUAL='vim'
+export XAUTHORITY=$HOME/.Xauthority
 
 export PATH=~/llvm-project/build/bin:$PATH
 
