@@ -16,6 +16,11 @@ source $ZSH/oh-my-zsh.sh
 # setopt PROMPT_SUBST
 
 RPROMPT=$'%(?..%{$fg[red]%}%?%{$reset_color%}) [%D{%l:%M:%S%p}]'
+# indicate hostname if in an SSH session
+if [[ -n $SSH_CONNECTION ]]; then
+    PROMPT="%{$fg_bold[yellow]%}(%m) $PROMPT"
+fi
+
 
 # env variables
 export EDITOR='vim'
